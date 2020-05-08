@@ -24,7 +24,7 @@ public class Ville {
      * Default constructor.
      */
     public Ville() {
-        this(null, null);
+        this(0, null);
     }
 
     /**
@@ -33,10 +33,10 @@ public class Ville {
      * @param firstName
      * @param lastName
      */
-    public Ville(String firstName, String lastName) {
+    public Ville(int postalCode, String cityName) {
         // Some initial dummy data, just for convenient testing.
-        this.postalCode = new SimpleIntegerProperty(12345);
-        this.city = new SimpleStringProperty("some city");
+        this.postalCode = new SimpleIntegerProperty(postalCode);
+        this.city = new SimpleStringProperty(cityName);
     }
 
 

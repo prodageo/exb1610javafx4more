@@ -12,7 +12,7 @@ import ch.makery.address.util.DateUtil;
 
 public class VilleOverviewController {
     @FXML
-    private TableView<Ville> VilleTable;
+    private TableView<Ville> villeTable;
     @FXML
     private TableColumn<Ville, Integer> postalCodeColumn;
     @FXML
@@ -51,7 +51,7 @@ public class VilleOverviewController {
         showVilleDetails(null);
 
         // Listen for selection changes and show the Ville details when changed.
-        VilleTable.getSelectionModel().selectedItemProperty().addListener(
+        villeTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showVilleDetails(newValue));
     }
 
@@ -64,7 +64,7 @@ public class VilleOverviewController {
         this.mainApp = mainApp;
 
         // Add observable list data to the table
-        VilleTable.setItems(mainApp.getVilleData());
+        villeTable.setItems(mainApp.getVilleData());
     }
     
     /**
@@ -93,9 +93,9 @@ public class VilleOverviewController {
      */
     @FXML
     private void handleDeleteVille() {
-        int selectedIndex = VilleTable.getSelectionModel().getSelectedIndex();
+        int selectedIndex = villeTable.getSelectionModel().getSelectedIndex();
         if (selectedIndex >= 0) {
-            VilleTable.getItems().remove(selectedIndex);
+            villeTable.getItems().remove(selectedIndex);
         } else {
             // Nothing selected.
             Alert alert = new Alert(AlertType.WARNING);
@@ -127,7 +127,7 @@ public class VilleOverviewController {
      */
     @FXML
     private void handleEditVille() {
-        Ville selectedVille = VilleTable.getSelectionModel().getSelectedItem();
+        Ville selectedVille = villeTable.getSelectionModel().getSelectedItem();
         if (selectedVille != null) {
             boolean okClicked = mainApp.showVilleEditDialog(selectedVille);
             if (okClicked) {
