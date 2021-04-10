@@ -5,3 +5,5 @@ Gestion d'une liste d'enregistrements sur la base du célèbre tuto de https://c
  - > git clone https://github.com/prodageo/exb1610javafx.git
  - > cd exb1610javafx
  - > mvn javafx:run
+
+![](https://raw.githubusercontent.com/prodageo/assets/master/2020-05-12_1740.png)
