@@ -34,10 +34,24 @@ public class MainApp extends Application {
      * Constructor
      */
     public MainApp() {
-        // Add some sample data
-		
+        // Add some sample data to the constructs of the GUI
+	// This has nothing to do with database
         villeData.add(new Ville(30100, "Marrakech"));
         villeData.add(new Ville(75000, "Paris"));
+	   
+	// TO DO
+	    /*
+	VilleIterator myVilleIt = myTxnScript.getVilleIterator()
+	int myCurrentCodePostal ;
+	String myCurrentNom ;    
+	while ( myVilleIt.hasNext() )
+	{
+		myCurrentNom = myVilleIt.nextNomVille ( ) ;
+		myCurrentCodePostal = myVilleIt.nextCodePostalVille ( ) ;		
+	        villeData.add(new Ville( myCurrentCodePostal, myCurrentNom));
+	}
+	*/
+		
     }
 
 	
