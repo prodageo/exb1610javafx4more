@@ -17,9 +17,17 @@ public class TxnScript
   
   public class VilleIterator
   {
-    // https://www.baeldung.com/java-nested-classes#static-nested-classes
-    
-
+    // https://www.baeldung.com/java-nested-classes#static-nested-classes 
+    bool hasNext()
+    {
+	    return the_result ;
+    }
+	  
+    String nextNomVille()
+    { String the_result = "" ; return the_result ; }
+	  
+    String nextCodePostal()
+    { String the_result = "" ; return the_result ; }
   }
   
 }
