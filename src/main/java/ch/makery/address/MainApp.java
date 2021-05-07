@@ -28,7 +28,7 @@ public class MainApp extends Application {
     /**
      * The data as an observable list of Persons.
      */
-    private ObservableList<Ville> villeData = FXCollections.observableArrayList();
+    private ObservableList<Ville> villesData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -36,8 +36,8 @@ public class MainApp extends Application {
     public MainApp() {
         // Add some sample data to the constructs of the GUI
 	// This has nothing to do with database
-        villeData.add(new Ville(30100, "Marrakech"));
-        villeData.add(new Ville(75000, "Paris"));
+        villesData.add(new Ville(30100, "Marrakech"));
+        villesData.add(new Ville(75000, "Paris"));
 	   
 	// TO DO
 	    /*
@@ -62,7 +62,7 @@ public class MainApp extends Application {
 	
 
     public ObservableList<Ville> getVilleData() {
-        return villeData;
+        return villesData;
     }
 
     /**
